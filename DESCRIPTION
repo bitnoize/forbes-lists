@@ -1,0 +1,6 @@
+Package: forbes-lists
+Version: 0.1
+Date: 2023-10-26
+Title: R wrapper for the Forbes list API
+Description: An easy way to access the data contained lists maintained by the fine folks at Forbes in R
+Author: Dmitry Krutikov <d.krutikov@gmail.com>

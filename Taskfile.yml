@@ -1,0 +1,8 @@
+version: '3'
+
+dotenv: ['.env']
+
+tasks:
+  scraper:
+    cmds:
+      - Rscript script/scraper.R
