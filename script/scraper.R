@@ -6,6 +6,6 @@ source(here("config.R"))
 
 source(here("src", "forbes-lists.R"))
 
-initialize(c('billionaires'))
+initialize(c('rtb'))
 #scrape_all_lists()
 
