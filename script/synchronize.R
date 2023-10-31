@@ -2,13 +2,10 @@
 
 library(here)
 
-source(here("config.R"))
-
 source(here("src", "forbes-lists.R"))
 
-initialize_forbes_lists(c('rtb',
-                          'billionaires'))
+init_forbes_lists(c('rtb'))
 
-#synchronize_forbes_lists()
-#save_forbes_lists()
+sync_forbes_lists()
+save_forbes_lists()
 

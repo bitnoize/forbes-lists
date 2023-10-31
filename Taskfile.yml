@@ -3,6 +3,6 @@ version: '3'
 dotenv: ['.env']
 
 tasks:
-  scraper:
+  synchronize:
     cmds:
-      - Rscript script/scraper.R
+      - Rscript script/synchronize.R

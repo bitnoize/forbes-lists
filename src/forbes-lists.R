@@ -13,7 +13,7 @@ suppressPackageStartupMessages({
 
 .share <- new.env()
 
-initialize_forbes_lists <-
+init_forbes_lists <-
   function(active_names,
            to_year = as.integer(year(now())),
            base_url = "https://www.forbes.com",
@@ -169,7 +169,7 @@ save_forbes_lists <-
     here("data", "db", paste0(name, ".Rds"))
   }
 
-synchronize_forbes_lists <-
+sync_forbes_lists <-
   function() {
     assert_that(is_tibble(.share$contents) &&
                 is.scalar(.share$to_year) &&
@@ -395,7 +395,12 @@ get_forbes_list <- function(name) {
               !is.na(name) &&
               name %in% .share$contents$name)
 
-  .share$db[[name]]
+  res <- .share$db[[name]]
+
+  if (is.null(res))
+    abort(sprintf("List %s not exists, try sync or load", name))
+
+  res
 }
 
 #
